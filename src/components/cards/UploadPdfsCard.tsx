@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 type UploadPdfsCardProps = {
   setFilesList: (files: string[]) => void;
 };
