@@ -15,16 +15,18 @@ import {
 } from "@mui/material";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { searchedSkillsList } from "../../constants";
+import { moroccanCitiesList, searchedSkillsList } from "../../constants";
 
 type NavbarHomeProps = {
   cvsIsHidden: boolean;
   handleChangeCvsIsHidden: () => void;
   cvsLength: number;
+  onClickApply: () => void;
 };
 
 export function NavbarHome(props: NavbarHomeProps) {
-  const { cvsIsHidden, handleChangeCvsIsHidden, cvsLength } = props;
+  const { cvsIsHidden, handleChangeCvsIsHidden, onClickApply, cvsLength } =
+    props;
   const router = useRouter();
   const [offer, setOffer] = useState<string>("");
   const [duration, setDuration] = useState<string>("");
@@ -46,7 +48,7 @@ export function NavbarHome(props: NavbarHomeProps) {
           <span className="font-bold text-2xl">{`${cvsLength}`}</span> CVs
           Uploaded
         </h1>
-        <Button onClick={() => router.push("/results")} variant="outlined">
+        <Button onClick={onClickApply} variant="outlined">
           Apply Filters
         </Button>
       </div>
@@ -85,6 +87,7 @@ export function NavbarHome(props: NavbarHomeProps) {
             className="p-3"
           />
         </Grid>
+
         <Grid item xs={6} sm={6} md={4}>
           <FormControl fullWidth>
             <InputLabel id="select-offer-label">Offer</InputLabel>
@@ -141,6 +144,22 @@ export function NavbarHome(props: NavbarHomeProps) {
               <MenuItem value="distance">Remote</MenuItem>
             </Select>
           </FormControl>
+        </Grid>
+        <Grid item xs={6} sm={6} md={4}>
+          <Autocomplete
+            multiple
+            options={moroccanCitiesList}
+            getOptionLabel={(option) => option}
+            className="my-4"
+            filterSelectedOptions
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                label="Cities"
+                placeholder="Where is needed"
+              />
+            )}
+          />
         </Grid>
       </Grid>
     </Paper>

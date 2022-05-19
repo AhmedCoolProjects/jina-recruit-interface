@@ -10,7 +10,7 @@ export function InfosCardItem(props: InfosCardItemProps) {
   return (
     <div className="flex  flex-row items-center space-x-2 my-1">
       <h1 className="font-semibold w-[150px] text-base">{cle}:</h1>
-      <h1 className="text-xl font-semibold text-opacity-80">{value}</h1>
+      <h1 className="text-md text-blue-900 font-semibold ">{value}</h1>
     </div>
   );
 }
@@ -25,15 +25,19 @@ export function InfosCardItemListImage(props: InfosCardItemListImageProps) {
   const { cle, list, image } = props;
   return (
     <div className="flex  flex-row items-center space-x-2 my-1">
-      <h1 className="font-semibold w-[150px] text-base">{cle}:</h1>
-      {list
-        ? list.map((listItem) => (
-            <span
-              className="capitalize font-medium"
-              key={listItem}
-            >{`${listItem}, `}</span>
-          ))
-        : null}
+      <h1 className="font-semibold w-[150px] max-w-[150px] min-w-[150px] text-base">
+        {cle}:
+      </h1>
+      <div>
+        {list
+          ? list.map((listItem) => (
+              <span
+                className="capitalize text-sm text-blue-900 font-medium"
+                key={listItem}
+              >{`${listItem}, `}</span>
+            ))
+          : null}
+      </div>
       {image ? (
         <Image
           src={image}

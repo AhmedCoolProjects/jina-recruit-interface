@@ -11,92 +11,71 @@ const ResultsPage: NextPage = () => {
       </Head>
       <div>
         <ResultCard
-          name="Ahmed Bargady"
-          cv="/go.pdf"
-          duration="1-2 months"
-          email="ahmed.bargady@outlook.com"
+          name="HILMI ANAS"
+          cv="/hilmi.pdf"
+          duration="5-6 months"
+          email="anas.hilmi.tyln@gmail.com"
           foundedSkills={[
-            "ReactJS",
-            "Typescirpt",
-            "flaskAPI",
-            "python",
-            "JS",
-            "Problem Solving",
+            "Gestion de recrutement",
+            "Marketing",
+            "Digitalisation RH",
+            "Gestion de formation",
+            "Gestion de projet",
+            "Pack Office",
+            "GPEC",
           ]}
           location="Rabat"
-          major="Data Science"
-          missingSkills={[
-            "Communication",
-            "Soft skills",
-            "react-native",
-            "dart",
-            "fluter",
-          ]}
-          offer="Stage PFA"
-          pages={1}
-          phone="06.72.62.87.44"
-          profilePicture={Images.me2021}
-          school="ESI Rabat"
+          major="Master Management Stratégique des Ressources Humaines"
+          missingSkills={["Communication"]}
+          offer="Stage PFE"
+          pages={2}
+          phone="06.08.28.25.43"
+          profilePicture={Images.hilmi}
+          school=" SOUISSI Mohamed V Rabat"
           workingMethod="Présentiel"
           score={1}
         />
         <ResultCard
-          name="Ahmed Bargady"
-          cv="/go.pdf"
-          duration="1-2 months"
-          email="ahmed.bargady@outlook.com"
+          name="Marwa ZOUINE"
+          cv="/marwa.pdf"
+          duration="5-6 months"
+          email="marwa.zouine@um5s.net.ma"
           foundedSkills={[
-            "ReactJS",
-            "Typescirpt",
-            "flaskAPI",
-            "python",
-            "JS",
-            "Problem Solving",
+            "Pack Office",
+            "Gestion d'équipe",
+            "Organisation des événements",
+            "Communication",
           ]}
           location="Rabat"
-          major="Data Science"
-          missingSkills={[
-            "Communication",
-            "Soft skills",
-            "react-native",
-            "dart",
-            "fluter",
-          ]}
-          offer="Stage PFA"
+          major="MASTER CCA (Comptabilié, Contrôle et Audit)"
+          missingSkills={["GPEG", "Gestion de recrutement"]}
+          offer="Stage PFE"
           pages={1}
-          phone="06.72.62.87.44"
-          profilePicture={Images.me2021}
-          school="ESI Rabat"
+          phone="06.10.93.89.48"
+          profilePicture={Images.marwa}
+          school=" SOUISSI SOUISSI Rabat"
           workingMethod="Présentiel"
           score={2}
         />
         <ResultCard
-          name="Ahmed Bargady"
-          cv="/go.pdf"
-          duration="1-2 months"
-          email="ahmed.bargady@outlook.com"
+          name="Rania AFQIR"
+          cv="/rania.pdf"
+          duration="5-6 months"
+          email="afqir.rania@gmail.com"
           foundedSkills={[
-            "ReactJS",
-            "Typescirpt",
-            "flaskAPI",
-            "python",
-            "JS",
-            "Problem Solving",
+            "Pack Office",
+            "Gestion d'équipe",
+            "Marketing",
+            "Communication",
           ]}
           location="Rabat"
-          major="Data Science"
-          missingSkills={[
-            "Communication",
-            "Soft skills",
-            "react-native",
-            "dart",
-            "fluter",
-          ]}
-          offer="Stage PFA"
-          pages={1}
-          phone="06.72.62.87.44"
-          profilePicture={Images.me2021}
-          school="ESI Rabat"
+          major="Master Management Stratégique des Ressources Humaines"
+          missingSkills={["GPEG", "Gestion de recrutement"]}
+          offer="Stage PFE"
+          pages={2}
+          phone="07.01.27.34.02"
+          profilePicture={Images.rania}
+          school="FSJES SOUISSI Rabat"
           workingMethod="Présentiel"
           score={3}
         />

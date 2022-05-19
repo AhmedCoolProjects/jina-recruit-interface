@@ -1,6 +1,7 @@
-import { Grid } from "@mui/material";
+import { CircularProgress, Fade, Grid } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import { NavbarHome, UploadPdfsCard } from "../src/components";
 
@@ -10,6 +11,16 @@ const Home: NextPage = () => {
   const handleChangeCvsIsHidden = () => {
     setCvsIsHidden(!cvsIsHidden);
   };
+  const [loading, setLoading] = useState<boolean>(false);
+  const router = useRouter();
+  const handleSetLoading = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      router.push("/results");
+    }, 4000);
+  };
+
   return (
     <div>
       <Head>
@@ -22,6 +33,7 @@ const Home: NextPage = () => {
         <h1 className="text-3xl font-semibold my-2">Filters</h1>
         <NavbarHome
           cvsLength={pdfsList.length}
+          onClickApply={handleSetLoading}
           handleChangeCvsIsHidden={handleChangeCvsIsHidden}
           cvsIsHidden={cvsIsHidden}
         />
@@ -48,6 +60,24 @@ const Home: NextPage = () => {
           </>
         )}
       </div>
+      {loading ? (
+        <div
+          className="absolute top-0 left-0 w-full h-full 
+      items-center z-10 justify-center flex flex-col
+      bg-black opacity-50"
+        >
+          <Fade
+            in={loading}
+            style={{
+              transitionDelay: loading ? "800ms" : "0ms",
+            }}
+            unmountOnExit
+            color="primary"
+          >
+            <CircularProgress size={100} />
+          </Fade>
+        </div>
+      ) : null}
     </div>
   );
 };
